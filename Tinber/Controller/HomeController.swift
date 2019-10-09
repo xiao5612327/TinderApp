@@ -28,8 +28,14 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topStackView.settingButton.addTarget(self, action: #selector(handleSetting), for: .touchUpInside)
         setupLayout()
         setupDummyCards()
+    }
+    
+    @objc func handleSetting() {
+        
     }
     
     fileprivate func setupDummyCards() {

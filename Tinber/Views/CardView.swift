@@ -25,8 +25,21 @@ class CardView: UIView {
             }
             
             barsStackView.arrangedSubviews.first?.backgroundColor = .black
+            
+            setupImageIndexObserver()
         }
     }
+    
+    fileprivate func setupImageIndexObserver() {
+        cardViewModel.imageIndexObserver = { [unowned self] (index, image) in
+            self.imageView.image = image
+            self.barsStackView.arrangedSubviews.forEach { (v) in
+                v.backgroundColor = .init(white: 0, alpha: 0.1)
+            }
+            self.barsStackView.arrangedSubviews[index].backgroundColor = .black
+        }
+    }
+    
     fileprivate let informationLabel = UILabel()
     fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "follower"))
     let gradientLayer = CAGradientLayer()
@@ -85,26 +98,10 @@ class CardView: UIView {
         let shouldAdvance = tapLocation.x > self.frame.width / 2 ? true : false
         
         if shouldAdvance {
-            if (imageIndex + 1) >= cardViewModel.imageNames.count {
-                imageIndex = 0
-            }else {
-                imageIndex = imageIndex + 1
-            }
-            
+            cardViewModel.advanceToNextPhoto()
         }else {
-            if (imageIndex - 1) < 0 {
-                imageIndex = cardViewModel.imageNames.count - 1
-            }else {
-                imageIndex = imageIndex - 1
-            }
+            cardViewModel.goToPreviousPhotos()
         }
-        
-        let image = cardViewModel.imageNames[imageIndex]
-        imageView.image = image
-        barsStackView.arrangedSubviews.forEach { (v) in
-            v.backgroundColor = .init(white: 0, alpha: 0.1)
-        }
-        barsStackView.arrangedSubviews[imageIndex].backgroundColor = .black
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {

@@ -10,6 +10,7 @@
 		8227C88A234BBAD30046E8C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227C889234BBAD30046E8C9 /* User.swift */; };
 		8227C88E234BED700046E8C9 /* CareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227C88D234BED700046E8C9 /* CareViewModel.swift */; };
 		828C6B0D234E66620052D5ED /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C6B0C234E66620052D5ED /* Advertiser.swift */; };
+		828C6B0F234EA8470052D5ED /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C6B0E234EA8470052D5ED /* RegistrationController.swift */; };
 		82ABD2B523108D50003CE626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD2B423108D50003CE626 /* AppDelegate.swift */; };
 		82ABD2B723108D50003CE626 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD2B623108D50003CE626 /* HomeController.swift */; };
 		82ABD2BA23108D50003CE626 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ABD2B823108D50003CE626 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		8227C889234BBAD30046E8C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8227C88D234BED700046E8C9 /* CareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareViewModel.swift; sourceTree = "<group>"; };
 		828C6B0C234E66620052D5ED /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
+		828C6B0E234EA8470052D5ED /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		82ABD2B123108D50003CE626 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD2B423108D50003CE626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ABD2B623108D50003CE626 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				82ABD2B623108D50003CE626 /* HomeController.swift */,
+				828C6B0E234EA8470052D5ED /* RegistrationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				82ABD2CE2310963E003CE626 /* HomeBttomControlStackView.swift in Sources */,
 				82ABD2B723108D50003CE626 /* HomeController.swift in Sources */,
 				8227C88E234BED700046E8C9 /* CareViewModel.swift in Sources */,
+				828C6B0F234EA8470052D5ED /* RegistrationController.swift in Sources */,
 				8227C88A234BBAD30046E8C9 /* User.swift in Sources */,
 				82ABD2BD23108D50003CE626 /* Tinber.xcdatamodeld in Sources */,
 				82ABD2CB23109148003CE626 /* Extensions+UIView.swift in Sources */,
@@ -361,7 +365,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Xiaoping.Tinber;
+				PRODUCT_BUNDLE_IDENTIFIER = Xiaoping.Tinder;
 				PRODUCT_NAME = Tinder;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,7 +383,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Xiaoping.Tinber;
+				PRODUCT_BUNDLE_IDENTIFIER = Xiaoping.Tinder;
 				PRODUCT_NAME = Tinder;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
