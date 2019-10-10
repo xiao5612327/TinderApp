@@ -36,6 +36,8 @@ class HomeController: UIViewController {
     
     @objc func handleSetting() {
         
+        let registrationController = RegistrationController()
+        present(registrationController, animated: true, completion: nil)
     }
     
     fileprivate func setupDummyCards() {
