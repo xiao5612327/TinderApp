@@ -80,6 +80,7 @@ class RegistrationController: UIViewController {
     
     @objc fileprivate func handleRegister() {
         self.handleTapDismiss()
+        print()
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
         Auth.auth().createUser(withEmail: email, password: pass) { (result, error) in
