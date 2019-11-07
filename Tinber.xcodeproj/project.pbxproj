@@ -3,14 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2389D2802373EDD800A87507 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389D27F2373EDD800A87507 /* RegistrationController.swift */; };
+		2389D2822373F0BB00A87507 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */; };
+		2389D2842373F7A900A87507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2389D2832373F7A900A87507 /* GoogleService-Info.plist */; };
+		285EDBEB946C881A56E147D6 /* Pods_Tinber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D1C1B73F0C150A640C286C /* Pods_Tinber.framework */; };
 		8227C88A234BBAD30046E8C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227C889234BBAD30046E8C9 /* User.swift */; };
 		8227C88E234BED700046E8C9 /* CareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8227C88D234BED700046E8C9 /* CareViewModel.swift */; };
 		828C6B0D234E66620052D5ED /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C6B0C234E66620052D5ED /* Advertiser.swift */; };
-		828C6B0F234EA8470052D5ED /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C6B0E234EA8470052D5ED /* RegistrationController.swift */; };
 		828C6B11234EAD360052D5ED /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828C6B10234EAD360052D5ED /* CustomTextField.swift */; };
 		82ABD2B523108D50003CE626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD2B423108D50003CE626 /* AppDelegate.swift */; };
 		82ABD2B723108D50003CE626 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ABD2B623108D50003CE626 /* HomeController.swift */; };
@@ -25,10 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2389D27F2373EDD800A87507 /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		2389D2832373F7A900A87507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30D0BF99F0EC9F11149F85FA /* Pods-Tinber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinber.release.xcconfig"; path = "Target Support Files/Pods-Tinber/Pods-Tinber.release.xcconfig"; sourceTree = "<group>"; };
+		81CCE66AA8CCBF73340C587C /* Pods-Tinber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinber.debug.xcconfig"; path = "Target Support Files/Pods-Tinber/Pods-Tinber.debug.xcconfig"; sourceTree = "<group>"; };
 		8227C889234BBAD30046E8C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8227C88D234BED700046E8C9 /* CareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareViewModel.swift; sourceTree = "<group>"; };
 		828C6B0C234E66620052D5ED /* Advertiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
-		828C6B0E234EA8470052D5ED /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		828C6B10234EAD360052D5ED /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		82ABD2B123108D50003CE626 /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ABD2B423108D50003CE626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +49,7 @@
 		82ABD2CD2310963E003CE626 /* HomeBttomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBttomControlStackView.swift; sourceTree = "<group>"; };
 		82ABD2CF23109A80003CE626 /* HomeTopControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTopControlStackView.swift; sourceTree = "<group>"; };
 		82ABD2D123109D9B003CE626 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B5D1C1B73F0C150A640C286C /* Pods_Tinber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +57,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285EDBEB946C881A56E147D6 /* Pods_Tinber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		360BB98DE1D1273CF5439515 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81CCE66AA8CCBF73340C587C /* Pods-Tinber.debug.xcconfig */,
+				30D0BF99F0EC9F11149F85FA /* Pods-Tinber.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		69F36F3B1011E092BDD1C375 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1C1B73F0C150A640C286C /* Pods_Tinber.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8227C888234BBAC50046E8C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +93,9 @@
 		8227C88B234BECE70046E8C9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2389D27F2373EDD800A87507 /* RegistrationController.swift */,
 				82ABD2B623108D50003CE626 /* HomeController.swift */,
-				828C6B0E234EA8470052D5ED /* RegistrationController.swift */,
+				2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -86,6 +113,8 @@
 			children = (
 				82ABD2B323108D50003CE626 /* Tinber */,
 				82ABD2B223108D50003CE626 /* Products */,
+				360BB98DE1D1273CF5439515 /* Pods */,
+				69F36F3B1011E092BDD1C375 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +135,7 @@
 				82ABD2CC2310961E003CE626 /* Views */,
 				82ABD2C923109125003CE626 /* Extensions */,
 				82ABD2B423108D50003CE626 /* AppDelegate.swift */,
+				2389D2832373F7A900A87507 /* GoogleService-Info.plist */,
 				82ABD2B823108D50003CE626 /* Main.storyboard */,
 				82ABD2BE23108D53003CE626 /* Assets.xcassets */,
 				82ABD2C023108D53003CE626 /* LaunchScreen.storyboard */,
@@ -141,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82ABD2C623108D53003CE626 /* Build configuration list for PBXNativeTarget "Tinber" */;
 			buildPhases = (
+				A7ABA0EA7E9B07D87FA10886 /* [CP] Check Pods Manifest.lock */,
 				82ABD2AD23108D50003CE626 /* Sources */,
 				82ABD2AE23108D50003CE626 /* Frameworks */,
 				82ABD2AF23108D50003CE626 /* Resources */,
+				0037D63CE0B7B7DFEF8454C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,10 +227,53 @@
 				82ABD2C223108D53003CE626 /* LaunchScreen.storyboard in Resources */,
 				82ABD2BF23108D53003CE626 /* Assets.xcassets in Resources */,
 				82ABD2BA23108D50003CE626 /* Main.storyboard in Resources */,
+				2389D2842373F7A900A87507 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0037D63CE0B7B7DFEF8454C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinber/Pods-Tinber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinber/Pods-Tinber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinber/Pods-Tinber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7ABA0EA7E9B07D87FA10886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82ABD2AD23108D50003CE626 /* Sources */ = {
@@ -211,11 +286,12 @@
 				82ABD2CE2310963E003CE626 /* HomeBttomControlStackView.swift in Sources */,
 				82ABD2B723108D50003CE626 /* HomeController.swift in Sources */,
 				8227C88E234BED700046E8C9 /* CareViewModel.swift in Sources */,
-				828C6B0F234EA8470052D5ED /* RegistrationController.swift in Sources */,
 				8227C88A234BBAD30046E8C9 /* User.swift in Sources */,
 				828C6B11234EAD360052D5ED /* CustomTextField.swift in Sources */,
 				82ABD2BD23108D50003CE626 /* Tinber.xcdatamodeld in Sources */,
+				2389D2822373F0BB00A87507 /* RegistrationViewModel.swift in Sources */,
 				82ABD2CB23109148003CE626 /* Extensions+UIView.swift in Sources */,
+				2389D2802373EDD800A87507 /* RegistrationController.swift in Sources */,
 				82ABD2B523108D50003CE626 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +436,7 @@
 		};
 		82ABD2C723108D53003CE626 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81CCE66AA8CCBF73340C587C /* Pods-Tinber.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +455,7 @@
 		};
 		82ABD2C823108D53003CE626 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30D0BF99F0EC9F11149F85FA /* Pods-Tinber.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

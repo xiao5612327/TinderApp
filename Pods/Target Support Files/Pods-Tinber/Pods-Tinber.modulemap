@@ -1,0 +1,6 @@
+framework module Pods_Tinber {
+  umbrella header "Pods-Tinber-umbrella.h"
+
+  export *
+  module * { export * }
+}
