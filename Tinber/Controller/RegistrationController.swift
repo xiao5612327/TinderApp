@@ -21,6 +21,9 @@ class RegistrationController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 275).isActive = true
         button.layer.cornerRadius = 16
+        button.imageView?.contentMode = .scaleAspectFill
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside)
         return button
     }()
     
@@ -78,23 +81,22 @@ class RegistrationController: UIViewController {
 
     }
     
+    let registringHUD = JGProgressHUD(style: .dark)
+    
     @objc fileprivate func handleRegister() {
         self.handleTapDismiss()
-        print()
-        guard let email = emailTextField.text else { return }
-        guard let pass = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: pass) { (result, error) in
+        
+        registrationViewModel.performRegistration {[weak self] (error) in
             if let err = error {
-                print(err)
-                self.showHUDWithError(err: err)
+                self?.showHUDWithError(err: err)
                 return
             }
-            
-            print("successful register", result?.user.uid)
         }
     }
     
     fileprivate func showHUDWithError(err: Error) {
+        registringHUD.dismiss()
+        
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Failed registration"
         hud.detailTextLabel.text = err.localizedDescription
@@ -116,13 +118,26 @@ class RegistrationController: UIViewController {
     let registrationViewModel = RegistrationViewModel()
     
     fileprivate func setupRegistrationViewModelObserver() {
-        registrationViewModel.isFormValidObserver = { [unowned self] (isFormValid) in
-            
-            self.registerButton.isEnabled = isFormValid
-            self.registerButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
-            self.registerButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
-
+        registrationViewModel.isFormValid.bind(observer: {[unowned self] (isFormValid) in
+            guard let isFormValid = isFormValid else { return }
+             self.registerButton.isEnabled = isFormValid
+                       self.registerButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
+                       self.registerButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
+        })
+        
+        registrationViewModel.bindableImage.bind { [unowned self] (image) in
+            self.selectPhotoButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
         }
+        
+        registrationViewModel.isRegisting.bind { [unowned self] (isRegistering) in
+            if isRegistering == true {
+                self.registringHUD.textLabel.text = "Register"
+                self.registringHUD.show(in: self.view)
+            }else {
+                self.registringHUD.dismiss()
+            }
+        }
+
     }
     
     // MARK:- Private
@@ -142,7 +157,7 @@ class RegistrationController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self) // you'll have a retain cycle
+//        NotificationCenter.default.removeObserver(self) // you'll have a retain cycle
     }
     
     @objc fileprivate func handleKeyboardHide() {
@@ -219,4 +234,23 @@ class RegistrationController: UIViewController {
         gradientLayer.frame = view.bounds
     }
 
+    @objc fileprivate func handleSelectPhoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+
+}
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            registrationViewModel.bindableImage.value = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
