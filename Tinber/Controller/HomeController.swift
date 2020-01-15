@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeController: UIViewController {
     
@@ -32,6 +33,21 @@ class HomeController: UIViewController {
         topStackView.settingButton.addTarget(self, action: #selector(handleSetting), for: .touchUpInside)
         setupLayout()
         setupDummyCards()
+        fetchUserFromFirebase()
+    }
+    
+    fileprivate func fetchUserFromFirebase() {
+        Firestore.firestore().collection("users").getDocuments { (snapshot, error) in
+            if let err = error {
+                print("failed to fetch  Users: ", err)
+                return
+            }
+            
+            snapshot?.documents.forEach({ (documentSnapshot) in
+                let userDictionary = documentSnapshot.data()
+                print("json:", userDictionary)
+            })
+        }
     }
     
     @objc func handleSetting() {
@@ -52,6 +68,8 @@ class HomeController: UIViewController {
     }
 
     fileprivate func setupLayout() {
+        view.backgroundColor = .white
+        
         let overallStackView = UIStackView(arrangedSubviews: [topStackView, cardsDeckView, bottomStackView])
         overallStackView.axis = .vertical
         view.addSubview(overallStackView)

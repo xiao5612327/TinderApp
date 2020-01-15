@@ -16,6 +16,13 @@ struct User: produceCardViewModel {
     var profession: String
     var imageName: [UIImage]
     
+//    init(dictionary: [String: Any]) {
+//         // we will initial user here
+//        let name = dictionary["fullName"]
+//        
+//        
+//    }
+    
     func toCardViewModel() -> CardViewModel {
         
         let attributedText = NSMutableAttributedString(string: name, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 32, weight: .heavy)])
