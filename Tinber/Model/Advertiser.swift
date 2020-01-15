@@ -12,7 +12,7 @@ import UIKit
 struct Advertiser: produceCardViewModel {
     let title: String
     let brandName: String
-    let posterPhotoName: UIImage
+    let posterPhotoName: String
     
     func toCardViewModel() -> CardViewModel {
         

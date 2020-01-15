@@ -15,11 +15,11 @@ protocol produceCardViewModel {
 
 class CardViewModel {
     
-    let imageNames: [UIImage]
+    let imageNames: [String]
     let attributedString: NSAttributedString
     let textAlignment: NSTextAlignment
     
-    init(imageNames: [UIImage], attributedString: NSAttributedString, textAlignment: NSTextAlignment) {
+    init(imageNames: [String], attributedString: NSAttributedString, textAlignment: NSTextAlignment) {
         self.imageNames = imageNames
         self.attributedString = attributedString
         self.textAlignment = textAlignment
@@ -34,7 +34,7 @@ class CardViewModel {
     }
     
     // Reactive Programming
-    var imageIndexObserver: ((Int, UIImage) -> ())?
+    var imageIndexObserver: ((Int, String) -> ())?
     
     func advanceToNextPhoto() {
         imageIndex = (imageIndex + 1) >= imageNames.count ? 0 : imageIndex + 1
