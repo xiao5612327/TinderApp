@@ -16,19 +16,6 @@ class HomeController: UIViewController {
     let bottomControls = HomeBttomControlStackView()
     let topStackView = HomeTopControlStackView()
     
-//    let users = [User(name: "Kelly", age: 1, profession: "Music DJ", imageName: UIImage(named: "follower")), User(name: "Jen", age: 3, profession: "Lady for see", imageName: UIImage(named: "fire"))]
-    
-//    let cardViewModel: [CardViewModel] = {
-//
-//        let producer = [User(name: "Kelly", age: 1, profession: "Music DJ", imageName: [UIImage(named: "follower")!]),
-//                        User(name: "Jen", age: 3, profession: "Lady for see", imageName: [UIImage(named: "fire")!]),
-//                        Advertiser(title: "Slide Out Menu", brandName: "Lets Build That App", posterPhotoName: UIImage()),
-//                        User(name: "on boarding", age: 66, profession: "Jupigo", imageName: [UIImage(named: "onboarding1")!, UIImage(named: "onboarding2")!, UIImage(named: "onboarding3")!])] as [produceCardViewModel]
-//
-//        let results = producer.map({$0.toCardViewModel()})
-//        return results
-//    }()
-    
     var cardViewModel = [CardViewModel]()
     
     override func viewDidLoad() {
@@ -72,8 +59,6 @@ class HomeController: UIViewController {
                 
                 self.setupCardFromUser(user: user)
             })
-            
-//            self.setupFirestoreUserCards()
         }
     }
     
@@ -87,8 +72,9 @@ class HomeController: UIViewController {
     
     @objc func handleSetting() {
         
-        let registrationController = RegistrationController()
-        present(registrationController, animated: true, completion: nil)
+        let settingsController = SettingsController()
+        let naviControler = UINavigationController(rootViewController: settingsController)
+        present(naviControler, animated: true, completion: nil)
     }
 
     fileprivate func setupFirestoreUserCards() {

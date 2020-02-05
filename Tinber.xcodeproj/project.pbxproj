@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23313CD323EAAC2A0059B14A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23313CD223EAAC2A0059B14A /* SettingsController.swift */; };
 		2389D2802373EDD800A87507 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389D27F2373EDD800A87507 /* RegistrationController.swift */; };
 		2389D2822373F0BB00A87507 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */; };
 		2389D2842373F7A900A87507 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2389D2832373F7A900A87507 /* GoogleService-Info.plist */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23313CD223EAAC2A0059B14A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		2389D27F2373EDD800A87507 /* RegistrationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		2389D2832373F7A900A87507 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				82ABD2B623108D50003CE626 /* HomeController.swift */,
 				2389D2812373F0BB00A87507 /* RegistrationViewModel.swift */,
 				2389D285237540E700A87507 /* Bindable.swift */,
+				23313CD223EAAC2A0059B14A /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				82ABD2CE2310963E003CE626 /* HomeBttomControlStackView.swift in Sources */,
 				82ABD2B723108D50003CE626 /* HomeController.swift in Sources */,
 				8227C88E234BED700046E8C9 /* CareViewModel.swift in Sources */,
+				23313CD323EAAC2A0059B14A /* SettingsController.swift in Sources */,
 				8227C88A234BBAD30046E8C9 /* User.swift in Sources */,
 				828C6B11234EAD360052D5ED /* CustomTextField.swift in Sources */,
 				2389D286237540E700A87507 /* Bindable.swift in Sources */,
